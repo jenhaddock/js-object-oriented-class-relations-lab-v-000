@@ -15,7 +15,9 @@ class Driver {
     }.bind(this))
   }
   passengers(){
-    return store.trips.find(this.id);
+    return this.trips().map(function(trip){
+      return trip.passenger()
+    })
   }
 }
 
