@@ -10,13 +10,13 @@ class Driver {
     store.drivers.push(this);
   }
   trips(){
-    return store.trips.filter(function(trip){
+    return store.trips.filter(function(tripMatch){
       return trip.driverId === this.id
     }.bind(this))
   }
   passengers(){
     return store.passengers.filter(function(passenger){
-      return trip.passengerId === this.id
+      return passenger.passengerId === this.id
     }.bind(this))
   }
 }
