@@ -9,11 +9,11 @@ class Driver {
 
     store.drivers.push(this);
   }
-  //trips(){
-    //return store.trips.filter(trip => {
-      //return trip.userId === this.id
-    //}.bind(this))
-  //}
+  trips(){
+    return store.trips.filter(trip => {
+      return trip.driverId === this.id
+    }.bind(this))
+  }
 }
 
 let passengerId = 0;
