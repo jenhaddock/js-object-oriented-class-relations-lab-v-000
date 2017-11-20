@@ -12,7 +12,7 @@ class Driver {
   trips(){
     return store.trips.filter(trip => {
       return trip.userId === this.id
-    })
+    }.bind(this))
   }
 }
 
@@ -52,4 +52,3 @@ class Trip{
     }.bind(this))
   }
 }
-
