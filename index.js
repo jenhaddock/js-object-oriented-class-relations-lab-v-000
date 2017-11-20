@@ -35,6 +35,11 @@ class Passenger{
       return tripMatch.passengerId === this.id
     }.bind(this))
   }
+  drivers(){
+    return this.trips().map(function(trip){
+      return trip.driver()
+    })
+  }
 }
 
 let tripId = 0;
